@@ -1,4 +1,5 @@
-import { Settings } from "lucide-react";
+import { Settings, Phone, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import maintenanceIllustration from "@/assets/maintenance-illustration.png";
 
 const MaintenanceContent = () => {
@@ -6,12 +7,12 @@ const MaintenanceContent = () => {
     <main className="min-h-screen flex items-center justify-center pt-20 pb-12 px-4">
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col items-center text-center">
-          {/* Illustration avec animation */}
+          {/* Illustration */}
           <div className="relative mb-8 animate-fade-in">
             <img
               src={maintenanceIllustration}
               alt="Maintenance en cours"
-              className="w-full max-w-md md:max-w-lg animate-float"
+              className="w-full max-w-md md:max-w-lg"
             />
             
             {/* Engrenages décoratifs animés */}
@@ -40,17 +41,23 @@ const MaintenanceContent = () => {
             Merci de votre patience !
           </p>
 
-          {/* Indicateur de progression */}
+          {/* Boutons de contact */}
           <div 
-            className="flex items-center gap-2 animate-fade-in"
+            className="flex flex-col sm:flex-row items-center gap-4 animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
-            <span className="text-sm text-muted-foreground">Mise à jour en cours</span>
-            <div className="flex gap-1">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse-dot"></span>
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse-dot-delay-1"></span>
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse-dot-delay-2"></span>
-            </div>
+            <a href="tel:+22461011121314">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 flex items-center gap-2">
+                <Phone size={20} />
+                +224 610 111 213 14
+              </Button>
+            </a>
+            <a href="mailto:guirex@guirex.com">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-3 flex items-center gap-2">
+                <Mail size={20} />
+                guirex@guirex.com
+              </Button>
+            </a>
           </div>
 
           {/* Message de contact */}
