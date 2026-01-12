@@ -7,7 +7,7 @@ const MaintenanceContent = () => {
   const { t } = useLanguage();
 
   return (
-    <main className="min-h-screen flex items-center justify-center py-12 px-4">
+    <main className="min-h-screen flex items-center justify-center pt-24 md:pt-28 pb-12 px-4">
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col items-center text-center">
           {/* Illustration */}
