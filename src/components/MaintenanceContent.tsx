@@ -1,10 +1,13 @@
 import { Settings, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import maintenanceIllustration from "@/assets/maintenance-illustration.png";
 
 const MaintenanceContent = () => {
+  const { t } = useLanguage();
+
   return (
-    <main className="min-h-screen flex items-center justify-center pt-20 pb-12 px-4">
+    <main className="min-h-screen flex items-center justify-center py-12 px-4">
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col items-center text-center">
           {/* Illustration */}
@@ -29,7 +32,7 @@ const MaintenanceContent = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 animate-fade-in"
             style={{ animationDelay: "0.1s" }}
           >
-            Site en maintenance
+            {t.maintenance.title}
           </h1>
 
           {/* Sous-titre */}
@@ -37,8 +40,7 @@ const MaintenanceContent = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8 animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
-            Nous travaillons actuellement sur notre site pour vous offrir une meilleure expérience. 
-            Merci de votre patience !
+            {t.maintenance.subtitle}
           </p>
 
           {/* Boutons de contact */}
@@ -66,10 +68,10 @@ const MaintenanceContent = () => {
             style={{ animationDelay: "0.4s" }}
           >
             <p className="text-foreground/80">
-              <span className="font-semibold text-primary">Besoin d'assistance ?</span>
+              <span className="font-semibold text-primary">{t.maintenance.needHelp}</span>
               <br />
               <span className="text-sm text-muted-foreground">
-                N'hésitez pas à nous contacter pendant cette période de maintenance.
+                {t.maintenance.helpText}
               </span>
             </p>
           </div>

@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import guirexLogo from "@/assets/guirex-logo.jpg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navLinks = [
-    { label: "Services", href: "#services" },
-    { label: "Partenaires", href: "#partners" },
+    { label: t.nav.services, href: "#services" },
+    { label: t.nav.partners, href: "#partners" },
   ];
 
   return (
@@ -40,7 +42,7 @@ const Navbar = () => {
             ))}
             <a href="mailto:guirex@guirex.com">
               <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6">
-                Contactez-nous
+                {t.nav.contact}
               </Button>
             </a>
           </div>
@@ -71,7 +73,7 @@ const Navbar = () => {
               ))}
               <a href="mailto:guirex@guirex.com">
                 <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full mt-2">
-                  Contactez-nous
+                  {t.nav.contact}
                 </Button>
               </a>
             </div>
