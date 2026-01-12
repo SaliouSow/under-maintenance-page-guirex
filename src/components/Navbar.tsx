@@ -7,7 +7,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "À propos de nous", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Partenaires", href: "#partners" },
   ];
@@ -39,9 +38,11 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6">
-              Contactez-nous
-            </Button>
+            <a href="mailto:guirex@guirex.com">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6">
+                Contactez-nous
+              </Button>
+            </a>
           </div>
 
           {/* Bouton menu mobile */}
@@ -68,9 +69,11 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full mt-2">
-                Contactez-nous
-              </Button>
+              <a href="mailto:guirex@guirex.com">
+                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full mt-2">
+                  Contactez-nous
+                </Button>
+              </a>
             </div>
           </div>
         )}
