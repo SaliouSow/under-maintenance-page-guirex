@@ -48,10 +48,10 @@ const MaintenanceContent = () => {
             className="flex flex-col sm:flex-row items-center gap-4 animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
-            <a href="tel:+22461011121314">
+            <a href="tel:+224622188436">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 flex items-center gap-2">
                 <Phone size={20} />
-                +224 610 111 213 14
+                +224 622 188 436
               </Button>
             </a>
             <a href="mailto:guirex@guirex.com">
